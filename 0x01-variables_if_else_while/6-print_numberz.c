@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: Prints all single digit numbers of base 10
- * starting from 0, followed by a new line, using the putchar function only once.
+ * starting from 0, followed by a new line, using the putchar function.
  *
  * Return: Always 0 (Success)
  */
