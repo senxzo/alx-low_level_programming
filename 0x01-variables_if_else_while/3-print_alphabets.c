@@ -24,7 +24,6 @@ int main(void)
         putchar(letter);
     }
 
-    // Print a newline character
     putchar('\n');
 
     return (0);
