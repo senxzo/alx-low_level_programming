@@ -10,16 +10,15 @@
  */
 int main(void)
 {
-    char letter;
+char letter;
 
-    // Start from 'z' and go down to 'a'
-    for (letter = 'z'; letter >= 'a'; letter--)
-    {
-        putchar(letter);
-    }
+/* Start from 'z' and go down to 'a' */
+for (letter = 'z'; letter >= 'a'; letter--)
+{
+putchar(letter);
+}
+/* Print a newline character */
+putchar('\n');
 
-    // Print a newline character
-    putchar('\n');
-
-    return (0);
+return (0);
 }
