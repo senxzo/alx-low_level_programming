@@ -23,7 +23,7 @@ putchar(' ');   /* Print space */
 }
 }
 
-putchar('\n'); // Print newline at the end
+putchar('\n'); /* Print newline at the end */
 
 return (0);
 }
