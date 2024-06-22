@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>  // Include the standard input-output library
+#include <stdio.h>
 
-/* 
+/**
  * main - Entry point
- * 
+ *
  * Description: This program assigns a random number to the variable n
- * each time it is executed and prints whether the number stored in 
- * the variable n is positive or negative.
- * 
+ * each time it is executed and prints whether the number stored in
+ * the variable n is positive, negative, or zero.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
