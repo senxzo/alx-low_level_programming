@@ -10,15 +10,15 @@
  */
 int main(void)
 {
-    // Calculate ASCII values for digits 0 to 9
-    int i;
-    for (i = 0; i < 10; i++)
-    {
-        putchar(i + '0');
-    }
+/* Calculate ASCII values for digits 0 to 9 */
+int i;
+for (i = 0; i < 10; i++)
+{
+putchar(i + '0');
+}
 
-    // Print a newline character
-    putchar('\n');
+/* Print a newline character */
+putchar('\n');
 
-    return (0);
+return (0);
 }
