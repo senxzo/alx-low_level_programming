@@ -1,41 +1,21 @@
-void _putchar(char c);
+#include <stdio.h> 
 
-void print_to_98(int n)
-{
-    int i;
-
-    if (n <= 98)
-    {
-        for (i = n; i <= 98; i++)
-        {
-            if (i != 98)
-            {
-                _putchar(i / 10 + '0'); 
-                _putchar(i % 10 + '0'); 
-                _putchar(','); 
-                _putchar(' '); 
-            }
-            else
-            {
-                _putchar('9'); 
-                _putchar('8');
-            }
-        }
-    }
-    else
-    {
-        for (i = n; i >= 98; i--)
-        {
-            _putchar(i / 10 + '0'); 
-            _putchar(i % 10 + '0'); 
-
-            if (i != 98)
-            {
-                _putchar(','); 
-                _putchar(' ');
-            }
-        }
-    }
-
-    _putchar('\n'); 
+/** * print_to_98 - Prints all natural numbers from input to 98, 
+* in order separated by a comma followed by a space. 
+* @n: The number to begin counting at. 
+*/ 
+void print_to_98(int n) 
+{ 
+if (n >= 98) 
+{ 
+while (n > 98) 
+printf("%d, ", n--); 
+printf("%d\n", n); 
+} 
+else 
+{ 
+while (n < 98) 
+printf("%d, ", n++); 
+printf("%d\n", n); 
+} 
 }
