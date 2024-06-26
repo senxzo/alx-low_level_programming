@@ -1,4 +1,4 @@
-void _putchar(char c); // Declaration for _putchar function
+void _putchar(char c);
 
 void print_to_98(int n)
 {
@@ -10,14 +10,14 @@ void print_to_98(int n)
         {
             if (i != 98)
             {
-                _putchar(i / 10 + '0'); // Print tens digit
-                _putchar(i % 10 + '0'); // Print ones digit
-                _putchar(','); // Print comma
-                _putchar(' '); // Print space
+                _putchar(i / 10 + '0'); 
+                _putchar(i % 10 + '0'); 
+                _putchar(','); 
+                _putchar(' '); 
             }
             else
             {
-                _putchar('9'); // Special case for 98
+                _putchar('9'); 
                 _putchar('8');
             }
         }
@@ -26,16 +26,16 @@ void print_to_98(int n)
     {
         for (i = n; i >= 98; i--)
         {
-            _putchar(i / 10 + '0'); // Print tens digit
-            _putchar(i % 10 + '0'); // Print ones digit
+            _putchar(i / 10 + '0'); 
+            _putchar(i % 10 + '0'); 
 
             if (i != 98)
             {
-                _putchar(','); // Print comma
-                _putchar(' '); // Print space
+                _putchar(','); 
+                _putchar(' ');
             }
         }
     }
 
-    _putchar('\n'); // Print newline
+    _putchar('\n'); 
 }
