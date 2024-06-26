@@ -4,6 +4,7 @@
  * main - Entry point
  *
  * Description: Prints alphabets followed by a new line.
+ *
  * print_alphabet - Prints the alphabet in lowercase,
  *
  * Return: Always 0 (Success)
@@ -16,5 +17,5 @@
 	{
 		_putchar(letter);
 	}
-	_putchar('\n');
+_putchar('\n');
 }
