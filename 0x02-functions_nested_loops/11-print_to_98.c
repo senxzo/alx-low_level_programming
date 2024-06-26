@@ -1,49 +1,41 @@
-#include "main.h"
+void _putchar(char c); // Declaration for _putchar function
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c);
-
-/**
- * print_to_98 - Prints all natural numbers from n to 98, followed by a new line.
- * @n: Starting number
- */
 void print_to_98(int n)
 {
+    int i;
+
     if (n <= 98)
     {
-        while (n <= 98)
+        for (i = n; i <= 98; i++)
         {
-            _putchar((n / 10) + '0'); /* Print tens digit */
-            _putchar((n % 10) + '0'); /* Print units digit */
-
-            if (n != 98)
+            if (i != 98)
             {
-                _putchar(',');
-                _putchar(' ');
+                _putchar(i / 10 + '0'); // Print tens digit
+                _putchar(i % 10 + '0'); // Print ones digit
+                _putchar(','); // Print comma
+                _putchar(' '); // Print space
             }
-            n++;
+            else
+            {
+                _putchar('9'); // Special case for 98
+                _putchar('8');
+            }
         }
     }
     else
     {
-        while (n >= 98)
+        for (i = n; i >= 98; i--)
         {
-            _putchar((n / 10) + '0'); /* Print tens digit */
-            _putchar((n % 10) + '0'); /* Print units digit */
+            _putchar(i / 10 + '0'); // Print tens digit
+            _putchar(i % 10 + '0'); // Print ones digit
 
-            if (n != 98)
+            if (i != 98)
             {
-                _putchar(',');
-                _putchar(' ');
+                _putchar(','); // Print comma
+                _putchar(' '); // Print space
             }
-            n--;
         }
     }
-    _putchar('\n');
+
+    _putchar('\n'); // Print newline
 }
