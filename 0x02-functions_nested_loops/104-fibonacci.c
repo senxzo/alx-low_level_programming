@@ -1,40 +1,47 @@
 #include <stdio.h>
 
-/**
- * main - Prints the first 98 Fibonacci numbers, starting with 1 and 2.
- *        Numbers are separated by a comma followed by a space.
- *
- * Return: Always 0.
- */
+void print_fibonacci()
+{
+    unsigned long f1 = 1, f2 = 2;
+    unsigned long f1_high, f1_low, f2_high, f2_low;
+    unsigned long high, low;
+    int i;
+
+    printf("%lu, %lu", f1, f2);
+
+    for (i = 3; i <= 98; i++)
+    {
+        if (f1 > 10000000000 || f2 > 10000000000)
+        {
+            f1_high = f1 / 10000000000;
+            f1_low = f1 % 10000000000;
+            f2_high = f2 / 10000000000;
+            f2_low = f2 % 10000000000;
+
+            high = f1_high + f2_high;
+            low = f1_low + f2_low;
+            if (low > 10000000000)
+            {
+                high += 1;
+                low %= 10000000000;
+            }
+
+            f1 = f2;
+            f2 = high * 10000000000 + low;
+            printf(", %lu%010lu", high, low);
+        }
+        else
+        {
+            f2 = f1 + f2;
+            f1 = f2 - f1;
+            printf(", %lu", f2);
+        }
+    }
+    printf("\n");
+}
+
 int main(void)
 {
-	unsigned long fib1_part1 = 0, fib1_part2 = 1;
-	unsigned long fib2_part1 = 0, fib2_part2 = 2;
-	unsigned long temp1, temp2;
-	int count;
-
-	printf("%lu, %lu", fib1_part2, fib2_part2);
-
-	for (count = 2; count < 98; count++)
-	{
-		temp1 = fib1_part1 + fib2_part1;
-		temp2 = fib1_part2 + fib2_part2;
-		if (temp2 > 999999999)
-		{
-			temp1 += temp2 / 1000000000;
-			temp2 %= 1000000000;
-		}
-
-		printf(", %lu", temp1 ? temp1 : temp2);
-		if (temp1)
-			printf("%lu", temp2);
-
-		fib1_part1 = fib2_part1;
-		fib1_part2 = fib2_part2;
-		fib2_part1 = temp1;
-		fib2_part2 = temp2;
-	}
-
-	printf("\n");
-	return (0);
+    print_fibonacci();
+    return (0);
 }
