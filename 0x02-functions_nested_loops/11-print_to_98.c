@@ -19,12 +19,8 @@ void print_to_98(int n)
     {
         while (n <= 98)
         {
-            if (n == 98)
-                _putchar(n / 10 + '0'); 
-            else
-                _putchar(n / 10 + '0'); 
-
-            _putchar(n % 10 + '0'); 
+            _putchar(n / 10 + '0'); /* Print tens digit */
+            _putchar(n % 10 + '0'); /* Print units digit */
 
             if (n != 98)
             {
@@ -38,12 +34,8 @@ void print_to_98(int n)
     {
         while (n >= 98)
         {
-            if (n == 98)
-                _putchar(n / 10 + '0'); 
-            else
-                _putchar(n / 10 + '0'); 
-
-            _putchar(n % 10 + '0'); 
+            _putchar(n / 10 + '0'); /* Print tens digit */
+            _putchar(n % 10 + '0'); /* Print units digit */
 
             if (n != 98)
             {
