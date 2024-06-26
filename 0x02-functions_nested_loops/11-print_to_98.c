@@ -1,28 +1,57 @@
 #include "main.h"
 
 /**
- * print_to_98 - Prints all natural numbers from n to 98
- * @n: Starting number
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Description: Prints numbers separated by commas and a space,
- * starting from n up to 98, followed by a new line.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c);
+
+/**
+ * print_to_98 - Prints all natural numbers from n to 98, followed by a new line.
+ * @n: Starting number
  */
 void print_to_98(int n)
 {
-    int i;
+    if (n <= 98)
+    {
+        while (n <= 98)
+        {
+            if (n == 98)
+                _putchar(n / 10 + '0'); 
+            else
+                _putchar(n / 10 + '0'); 
 
-    if (n <= 98) {
-        for (i = n; i <= 98; i++) {
-            printf("%d", i);
-            if (i != 98)
-                printf(", ");
-        }
-    } else {
-        for (i = n; i >= 98; i--) {
-            printf("%d", i);
-            if (i != 98)
-                printf(", ");
+            _putchar(n % 10 + '0'); 
+
+            if (n != 98)
+            {
+                _putchar(',');
+                _putchar(' ');
+            }
+            n++;
         }
     }
-    printf("\n");
+    else
+    {
+        while (n >= 98)
+        {
+            if (n == 98)
+                _putchar(n / 10 + '0'); 
+            else
+                _putchar(n / 10 + '0'); 
+
+            _putchar(n % 10 + '0'); 
+
+            if (n != 98)
+            {
+                _putchar(',');
+                _putchar(' ');
+            }
+            n--;
+        }
+    }
+    _putchar('\n');
 }
