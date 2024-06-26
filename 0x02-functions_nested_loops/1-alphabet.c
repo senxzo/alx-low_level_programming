@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Calls the function to print the alphabet.
+ * Description: Calls the function to print the alphabet.
  *
  * Return: Always 0 (Success)
  */
