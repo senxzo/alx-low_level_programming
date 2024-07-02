@@ -4,6 +4,9 @@
 # Ignore all .vscode files
 *.vscode
 
+# Ignore .gitignore files
+*.gitignore
+
 # Ignore the node_modules directory
 node_modules/
 
