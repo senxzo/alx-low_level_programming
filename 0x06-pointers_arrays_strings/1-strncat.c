@@ -1,12 +1,15 @@
 #include "main.h"
+
 /**
+*
 * _strncat - function
+*
 * @dest: param 1
 * @src: param 2
 * @n: param 3
+*
 * return: dest
 */
-
 char *_strncat(char *dest, char *src, int n)
 {
     int i;
