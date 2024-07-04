@@ -4,18 +4,17 @@
  * @s:string
  * Return:char
  */
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
-    int i = 0;
 
-    while (str[i] != '\0')
-    {
-        if (str[i] >= 'a' && str[i] <= 'z')
-        {
-            str[i] = str[i] - 'a' + 'A';
-        }
-        i++;
-    }
+	int i;
 
-    return (str);
+i = 0;
+	while (*(s + i))
+	{
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+			*(s + i) -= 'a' - 'A';
+		i++;
+	}
+	return (s);
 }
