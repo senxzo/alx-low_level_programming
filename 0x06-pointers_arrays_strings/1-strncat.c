@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
-*
-* _strncat - function
-*
-* @dest: param 1
-* @src: param 2
-* @n: param 3
-*
-* return: dest
-*/
+ * _strncat - Concatenates up to n characters from the src string
+ *            to the dest string.
+ * @dest: Destination string.
+ * @src: Source string.
+ * @n: Maximum number of characters to concatenate.
+ *
+ * Return: Pointer to the resulting dest string.
+ */
 char *_strncat(char *dest, char *src, int n)
 {
     int i;
@@ -19,11 +18,11 @@ char *_strncat(char *dest, char *src, int n)
     destcount++;
     }
     for (i = 0; i < n && src[i] != '\0'; i++) {
-        dest[destcount] = src[i];
+        dest[destcount + i] = src[i];
         destcount++;
     }
-     dest[destcount] = '\0';
+     dest[destcount + i] = '\0';
 
-    return dest;
+    return (dest);
     
 }
