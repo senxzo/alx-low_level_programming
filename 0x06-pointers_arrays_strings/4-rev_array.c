@@ -9,10 +9,8 @@ void reverse_array(int *a, int n)
 {
     int i, temp;
 
-    // Loop through the array from the end to the beginning
     for (i = n - 1; i >= 0; i--)
     {
-        // Swap elements between start and end
         temp = a[i];
         a[i] = a[n - 1 - i];
         a[n - 1 - i] = temp;
