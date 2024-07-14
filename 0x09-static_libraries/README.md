@@ -1,2 +1,1 @@
 C static libraries
-s
