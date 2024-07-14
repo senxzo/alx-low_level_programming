@@ -1,1 +1,1 @@
-Learning static libraries
+C static libraries
