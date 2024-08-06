@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 #ifndef LISTS_H
 #define LISTS_H
 
@@ -9,11 +13,14 @@
  * Description: singly linked list node structure
  * 
  */
+ 
+ size_t print_listint(const listint_t *h);
 typedef struct listint_s
 {
     int n;
     struct listint_s *next;
 } listint_t;
+
 
 
 #endif
