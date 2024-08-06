@@ -11,7 +11,13 @@ listint_t *find_listint_loop(listint_t *head)
 	listint_t *slow = head;
 	listint_t *fast = head;
 
-	while (slow && fast && fast->next)
+	if (head == NULL)
+	{
+		return (NULL);
+	}
+
+	/* Detect loop using Floyd's cycle-finding algorithm */
+	while (fast && fast->next)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
@@ -20,6 +26,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			listint_t *start = head;
 
+			/* Find the start of the loop */
 			while (start != slow)
 			{
 				start = start->next;
