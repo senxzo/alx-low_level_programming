@@ -1,0 +1,5 @@
+strings ./crackme3
+gdb ./crackme3
+(gdb) break main
+(gdb) run
+objdump -d ./crackme3

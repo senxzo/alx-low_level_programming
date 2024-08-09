@@ -9,10 +9,12 @@ int get_endianness(void)
 {
 	union
 	{
-		unsigned int i;
-		char c;
+		unsigned int i;  /* An unsigned integer */
+		char c;          /* A char to test the endianness */
 	} test;
 
 	test.i = 1;
+
+	/* If the least significant byte is 1, the system is little endian */
 	return (test.c);
 }
