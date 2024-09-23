@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+check_factor()
+{
+    # Handling arguments: either exactly 3 or more
+    if [ $# -ne 3 ]; then
+        args=("$@")
+        num2=1
+        for ((i=2; i<${#args[@]}; i++)); do
+            num2=$(($num2 * ${args[i]}))  # Multiplying all factors after the second
+        done
+    else
+        num2=$3
+    fi
+
+    num1=$2
+    num=$(echo "$1" | tr ':' '=')  # Replace ':' with '='
+
+    # Swap if num2 is greater than num1 using bash arithmetic
+    if ((num2 > num1)); then
+        temp=$num1
+        num1=$num2
+        num2=$temp
+    fi
+
+    echo "$num$num1*$num2"
+}
+
+# Check if exactly one argument (the file) is provided
+if [ $# -ne 1 ]; then
+    echo 'Usage: factors <file>'
+    exit 1
+fi
+
+# Read the file line by line
+while read -r i; do
+    result=$(factor "$i")  # Factorize the number
+    check_factor $result   # Pass the result to check_factor
+done < "$1"
